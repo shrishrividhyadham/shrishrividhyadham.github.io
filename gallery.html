@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title class="lang lang-en">Shri Shri Vidhyadham</title>
+    <title class="lang lang-hi">श्री श्रीविद्याधाम</title>
+    <link rel="icon" href="images/logo.png" type="image/png" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/gallery.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Temple Logo" />
+                <h2 class="lang lang-en">Shri Shri Vidhyadham</h2>
+                <h2 class="lang lang-hi">श्री श्रीविद्याधाम</h2>
+            </div>
+            <div class="lang-toggle">
+                <button id="lang-en" class="lang-btn active">EN</button>
+                <button id="lang-hi" class="lang-btn">हिंदी</button>
+            </div>
+            <div class="menu-toggle">☰</div>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="aboutus.html">AboutUs</a></li>
+                </ul>
+            </nav>
+            <!-- <div class="menu-toggle" onclick="toggleMenu()">☰</div> -->
+            <!-- <div class="menu-toggle">☰</div> -->
+        </div>
+    </header>
+  <!-- Gallery Section -->
+  <section class="gallery-section">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="images/gallery/gallery1.jpg" alt="Event 1" onclick="openLightbox(this)" />
+      <img src="images/gallery/gallery2.JPG" alt="Event 2" onclick="openLightbox(this)" />
+      <img src="images/gallery/gallery3.jpg" alt="Event 3" onclick="openLightbox(this)" />
+      <img src="images/gallery/gallery4.jpg" alt="Event 4" onclick="openLightbox(this)" />
+      <img src="images/gallery/gallery5.jpg" alt="Event 4" onclick="openLightbox(this)" />
+      <img src="images/gallery/gallery6.jpg" alt="Event 4" onclick="openLightbox(this)" />
+      <img src="images/gallery/gallery7.jpg" alt="Event 4" onclick="openLightbox(this)" />
+    </div>
+  </section>
+
+  <!-- Lightbox Popup -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Full View" />
+  </div>
+
+  <!-- Social Media -->
+    <section class="social">
+        <div class="container">
+            <h2 class="lang lang-hi">हमें फॉलो करें</h2>
+            <h2 class="lang lang-en">Follow Us</h2>
+            <div class="social-icons">
+                <a href="https://instagram.com/shrishrividhyadham" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/shrishrividhyadhamofficial" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://youtube.com/@shrishrividhyadham" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="lang lang-hi">© 2025 श्री श्रीविद्याधाम | सभी अधिकार सुरक्षित</p>
+            <p class="lang lang-en">© 2025 Shri Shri Vidhyadham | All Rights Reserved</p>
+        </div>
+    </footer>
+
+  <!-- Lightbox Script -->
+  <script>
+    function openLightbox(img) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
